@@ -3,6 +3,7 @@ const { model, Schema } = require("mongoose");
 const channelSchema = new Schema({
   name: {
     type: String,
+    required:true
   },
 
   description: {
@@ -13,7 +14,8 @@ const channelSchema = new Schema({
     required:true
   },
   topic:{
-    type:String
+    type:String,
+    required:true
   },
   server:{
     type:String

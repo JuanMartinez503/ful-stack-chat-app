@@ -3,17 +3,30 @@ const {model,Schema}=require('mongoose')
 
 const serverSchema = new Schema({
     name:{
-        type:String
+        type:String,
+        required:true
     },
     description:{
-        type:String
+        type:String,
+        required:true
     },
     severOwner:{
-        type:String
+        type:Schema.Types.ObjectId,
+        ref:'User'
     },
     category:{
-        type:string
-    }
+        type:Schema.Types.ObjectId,
+        ref: 'Category'
+    },
+    members:[
+        {
+            type: Schema.Types.ObjectId,
+            ref:'User'
+
+        }
+    ]
+        
+       
 },
 {
     toJSON:{virtuals:true},

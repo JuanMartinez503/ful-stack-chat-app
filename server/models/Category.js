@@ -2,10 +2,12 @@ const {model,Schema }= require('mongoose')
 
 const categorySchema = new Schema({
     name: {
-        type:String
+        type:String,
+        required:true
     },
     description:{
-        type:String
+        type:String,
+        required:true
     }
 },{
     toJSON:{virtuals:true},
