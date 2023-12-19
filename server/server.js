@@ -13,5 +13,5 @@ app.use(express.static(path.join(__dirname, '../client/dist')))
 app.use(routes)
 
 db.once('open',()=>{
-    app.listen(PORT, console.log(`App is listening at ${PORT}`))
+    app.listen(PORT, console.log(`App is listening at  http://localhost:${PORT}`))
 })

@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URI) || 'mongodb://localhost:27017/chatDB'
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/chatDB')
 
 module.exports = mongoose.connection
